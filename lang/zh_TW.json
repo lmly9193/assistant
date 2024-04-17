@@ -1,6 +1,6 @@
 {
     "(and :count more error)": "（還有 :count 個錯誤）",
-    "(and :count more errors)": "（還有 :count 多個錯誤）",
+    "(and :count more errors)": "（還有 :count 個錯誤）|（還有 :count 多個錯誤）|（還有 :count 多個錯誤）",
     "A Timeout Occurred": "發生超時",
     "Accept": "接受",
     "Accepted": "公認",
@@ -52,6 +52,7 @@
     "Edit": "編輯",
     "Edit :name": "編輯:name",
     "Enable": "啟用",
+    "errors": "錯誤",
     "Expand": "擴張",
     "Expand All": "展開全部",
     "Expectation Failed": "期望失敗",
@@ -90,6 +91,7 @@
     "Like": "喜歡",
     "Load": "載入",
     "Localize": "在地化",
+    "Location": "地點",
     "Locked": "鎖定",
     "Login": "登入",
     "Logout": "登出",
