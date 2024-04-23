@@ -41,4 +41,15 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * Test User
+     */
+    public function test(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'name'  => 'Test User',
+            'email' => 'test@example.com',
+        ]);
+    }
 }
