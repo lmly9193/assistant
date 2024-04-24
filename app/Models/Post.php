@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 #[ObservedBy([\App\Observers\PostObserver::class])]
 class Post extends Model
@@ -52,8 +52,9 @@ class Post extends Model
     protected function casts(): array
     {
         return [
+            'is_published' => 'boolean',
             'published_at' => 'datetime',
-            'expired_at'   => 'datetime',
+            'expired_at' => 'datetime',
         ];
     }
 

@@ -27,7 +27,9 @@ class PostObserver
      */
     public function updating(Post $post): void
     {
-        //
+        if ($post->isDirty('is_published') && $post->is_published && !$post->getOriginal('published_at')) {
+            $post->published_at = now();
+        }
     }
 
     /**
