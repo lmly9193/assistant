@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class PostTagResource extends Resource
 {
-    protected static ?string $breadcrumb = '文章管理ㄉ';
+    protected static ?string $breadcrumb = '文章管理';
 
     protected static ?string $modelLabel = '標籤';
 
