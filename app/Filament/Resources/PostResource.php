@@ -84,6 +84,9 @@ class PostResource extends Resource
                                             ->default(false)
                                             ->inline()
                                             ->live()
+                                            ->afterStateUpdated(function ($get, $set) {
+                                                $set('published_at', $get('is_published') ? now()->toDateTimeString() : null);
+                                            })
                                             ->required(),
                                         Forms\Components\DateTimePicker::make('published_at')
                                             ->label('發表時間')
